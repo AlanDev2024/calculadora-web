@@ -1,0 +1,79 @@
+/* Define o estilo do corpo da página */
+body {
+    display: flex; /* Usa flexbox para centralizar conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da janela */
+    background-color: #1E1E2F; /* Cor de fundo da página (azul escuro) */
+    font-family: Arial, sans-serif; /* Fonte padrão da página */
+}
+
+/* Container principal que envolve a calculadora */
+.container {
+    display: flex; /* Flexbox para organizar elementos dentro */
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente os itens */
+    gap: 15px; /* Espaçamento entre os elementos filhos */
+}
+
+/* Estilo do título da calculadora */
+h1 {
+    color: #FFFFFF; /* Cor do texto (branco) */
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Estilo da área da calculadora */
+.calculadora {
+    background-color: #2E2E4E; /* Cor de fundo da calculadora (azul escuro) */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Sombra para dar profundidade */
+}
+
+/* Estilo do display/visor da calculadora */
+#display {
+    width: 96%; /* Largura do display quase total */
+    height: 90px; /* Altura do display */
+    margin-bottom: 15px; /* Espaço abaixo do display */
+    font-size: 30px; /* Tamanho da fonte */
+    text-align: right; /* Alinha o texto à direita */
+    padding: 5px 10px; /* Espaçamento interno do display */
+    border-radius: 8px; /* Bordas arredondadas */
+    border: none; /* Remove borda padrão */
+    background-color: #F0F0F3; /* Cor de fundo do display (claro) */
+}
+
+/* Container dos botões da calculadora */
+.botoes {
+    display: grid; /* Usa grid para organizar os botões */
+    grid-template-columns: repeat(4, 80px); /* 4 colunas com largura de 80px cada */
+    grid-auto-rows: 80px; /* Altura padrão de cada linha */
+    gap: 15px; /* Espaçamento entre os botões */
+    justify-content: center; /* Centraliza a grid horizontalmente */
+}
+
+/* Estilo padrão de todos os botões */
+button {
+    font-size: 24px; /* Tamanho da fonte dos botões */
+    border-radius: 12px; /* Bordas arredondadas */
+    border: none; /* Remove bordas padrão */
+    cursor: pointer; /* Mostra cursor de mão ao passar por cima */
+    background-color: #6A4FFF; /* Cor de fundo padrão dos botões (roxo) */
+    color: white; /* Cor do texto dos botões */
+    transition: background-color 0.3s; /* Animação suave ao alterar cor */
+}
+
+/* Efeito ao passar o mouse sobre os botões */
+button:hover {
+    background-color: #836FFF; /* Cor de fundo muda para tom mais claro */
+}
+
+/* Botão zero ocupa três colunas na grid */
+.botao-zero {    
+    grid-column: span 3; /* Faz o botão "0" ser 3x mais largo que os outros */
+}
+
+/* Botão igual ocupa duas linhas na grid */
+.botao-igual {
+    grid-row: span 2; /* Faz o botão "=" ser 2x mais alto que os outros */
+}
